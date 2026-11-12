@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gachuru FC | Official Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#f8f9fa;
+    color:#333;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    background:#006400;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo{
+    color:#FFD700;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:#FFD700;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1574629810360-7efbbe195018');
+    background-size:cover;
+    background-position:center;
+    height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* SECTIONS */
+
+section{
+    padding:60px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+    color:#006400;
+    font-size:32px;
+}
+
+/* ABOUT */
+
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+/* NEXT MATCH */
+
+.match-card{
+    background:white;
+    max-width:500px;
+    margin:auto;
+    text-align:center;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.match-card h3{
+    color:#006400;
+    margin-bottom:15px;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    background:white;
+    text-align:center;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.stat h2{
+    color:#006400;
+}
+
+/* OFFICIALS */
+
+.officials{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    text-align:center;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#006400;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* CONTACT */
+
+.contact-box{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.socials{
+    margin-top:10px;
+}
+
+.socials a{
+    color:#FFD700;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+}
+
+.nav-links{
+    margin-top:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.nav-links li{
+    margin:8px;
+}
+
+.hero{
+    height:70vh;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.stats{
+    grid-template-columns:1fr 1fr;
+}
+
+.officials{
+    grid-template-columns:1fr;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<div class="container navbar">
+
+<div class="logo">GACHURU FC</div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#match">Fixtures</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div>
+<h1>GACHURU FC</h1>
+<p>One Team • One Dream</p>
+<a href="#match" class="btn">Next Match</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+<div class="container">
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+<p>
+Gachuru FC is a community football club committed to nurturing talent,
+promoting teamwork, and competing with excellence. We aim to inspire
+young footballers and unite supporters through the love of the game.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- NEXT MATCH -->
+
+<section id="match">
+
+<div class="container">
+
+<h2 class="section-title">Next Match</h2>
+
+<div class="match-card">
+<h3>Gachuru FC vs Eagles FC</h3>
+<p>📅 20 December 2026</p>
+<p>📍 Gachuru Football Ground</p>
+<p><strong>Kick Off: 3:00 PM</strong></p>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Club Statistics</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>15+</h2>
+<p>Years</p>
+</div>
+
+<div class="stat">
+<h2>20+</h2>
+<p>Trophies</p>
+</div>
+
+<div class="stat">
+<h2>300+</h2>
+<p>Matches</p>
+</div>
+
+<div class="stat">
+<h2>120+</h2>
+<p>Players</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- OFFICIALS -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Club Officials</h2>
+
+<div class="officials">
+
+<div class="card">
+<h3>Head Coach</h3>
+<p>Coach Name</p>
+</div>
+
+<div class="card">
+<h3>Team Captain</h3>
+<p>Captain Name</p>
+</div>
+
+<div class="card">
+<h3>Team Manager</h3>
+<p>Manager Name</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="container">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974" alt="">
+<img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68" alt="">
+<img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d" alt="">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-box">
+
+<p><strong>📞 Phone:</strong> +254 700 000 000</p>
+<p><strong>✉ Email:</strong> info@gachurufc.com</p>
+<p><strong>📍 Location:</strong> Gachuru, Kenya</p>
+
+<div class="socials">
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">TikTok</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>GACHURU FC</h3>
+<p>One Team • One Dream</p>
+<p>© 2026 Gachuru FC. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
