@@ -22,7 +22,7 @@ body{
 
 .container{
     width:90%;
-    max-width:1100px;
+    max-width:1500px;
     margin:auto;
 }
 
@@ -32,7 +32,7 @@ header{
     background:#006400;
     position:sticky;
     top:0;
-    z-index:1000;
+    z-index:0;
 }
 
 .navbar{
@@ -96,7 +96,7 @@ header{
     background:#FFD700;
     color:black;
     text-decoration:none;
-    padding:12px 25px;
+    padding:3px 2px;
     border-radius:5px;
     font-weight:bold;
 }
@@ -108,7 +108,7 @@ header{
 /* SECTIONS */
 
 section{
-    padding:60px 0;
+    padding:15px 0;
 }
 
 .section-title{
@@ -122,7 +122,7 @@ section{
 
 .about{
     text-align:center;
-    max-width:800px;
+    max-width:1500px;
     margin:auto;
 }
 
@@ -130,10 +130,10 @@ section{
 
 .match-card{
     background:white;
-    max-width:500px;
+    max-width:1500px;
     margin:auto;
     text-align:center;
-    padding:30px;
+    padding:2px;
     border-radius:10px;
     box-shadow:0 3px 10px rgba(0,0,0,.1);
 }
@@ -154,7 +154,7 @@ section{
 .stat{
     background:white;
     text-align:center;
-    padding:25px;
+    padding:2px;
     border-radius:10px;
     box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
@@ -168,19 +168,19 @@ section{
 .officials{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:2px;
 }
 
 .card{
     background:white;
     text-align:center;
-    padding:25px;
-    border-radius:10px;
+    padding:2px;
+    border-radius:1px;
     box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
 .card h3{
-    color:#006400;
+    color:purple;
 }
 
 /* GALLERY */
@@ -202,9 +202,9 @@ section{
 
 .contact-box{
     background:white;
-    padding:30px;
+    padding:5px;
     text-align:center;
-    border-radius:10px;
+    border-radius:5px;
     box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
@@ -271,6 +271,81 @@ footer{
 
 }
 
+
+
+
+
+
+
+
+.table-container{
+    overflow-x:auto;
+}
+
+.results-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.results-table th{
+    background:blue;
+    color:white;
+    padding:1px;
+    text-align:center;
+}
+
+.results-table td{
+    padding:1px;
+	color:black;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+.results-table tr:hover{
+    background:green;
+	color:purple;
+}
+
+.win{
+    background:#28a745;
+    color:white;
+    padding:5px 12px;
+    border-radius:20px;
+}
+
+.draw{
+    background:#ffc107;
+    color:black;
+    padding:5px 12px;
+    border-radius:20px;
+}
+
+.loss{
+    background:#dc3545;
+    color:white;
+    padding:5px 12px;
+    border-radius:20px;
+}
+
+@media(max-width:768px){
+
+.results-table th,
+.results-table td{
+    padding:10px;
+    font-size:14px;
+}
+
+}
+
+
+
+
+
+
 </style>
 
 </head>
@@ -283,10 +358,13 @@ footer{
 
 <ul class="nav-links">
 <li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
+
 <li><a href="#match">Fixtures</a></li>
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#Register">Register</a></li>
+
 </ul>
 
 </div>
@@ -302,23 +380,7 @@ footer{
 </div>
 </section>
 
-<!-- ABOUT -->
 
-<section id="about">
-<div class="container">
-
-<h2 class="section-title">About Us</h2>
-
-<div class="about">
-<p>
-Gachuru FC is a community football club committed to nurturing talent,
-promoting teamwork and competing with excellence. We aim to inspire
-young footballers and unite supporters through the love of the game.
-</p>
-</div>
-
-</div>
-</section>
 
 <!-- NEXT MATCH -->
 
@@ -326,14 +388,114 @@ young footballers and unite supporters through the love of the game.
 
 <div class="container">
 
-<h2 class="section-title">Next Match</h2>
 
-<div class="match-card">
-<h3>Gachuru FC vs Ngutu FC</h3>
-<p>📅 20 December 2026</p>
-<p>📍It is Round of 32 at Gachuru Football Ground</p>
-<p><strong>Kick Off: 3:00 PM</strong></p>
-</div>
+
+
+
+
+
+
+    <div class="container">
+
+        <h2 class="section-title">Upcoming Fixtures</h2>
+
+        <table class="results-table">
+
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Match</th>
+                    <th>Venue</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>20 Dec 2026</td>
+                    <td>Gachuru FC vs Ngutu FC</td>
+                    <td>Gachuru Ground</td>
+                    <td>3:30 PM</td>
+                </tr>
+
+                <tr>
+                    <td>27 Dec 2026</td>
+                    <td>Giithu FC vs Gachuru FC</td>
+                    <td>Giithu  Stadium</td>
+                    <td>4:00 PM</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+</section>
+
+
+
+
+<section id="results">
+
+    <div class="container">
+
+        <h2 class="section-title">Match Results</h2>
+
+        <div class="table-container">
+
+            <table class="results-table">
+
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Competition</th>
+                        <th>Match</th>
+                        <th>Score</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>20 Dec 2026</td>
+                        <td>League</td>
+                        <td>Gachuru FC vs Ngutu FC</td>
+                        <td>Not yet played</td>
+                        <td><span class="win">Waiting the game</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>27 Dec 2026</td>
+                        <td>League</td>
+                        <td>Giithu FC vs Gachuru FC</td>
+                        <td>Not yet played</td>
+                        <td><span class="draw">Waiting the game</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>NONE</td>
+                        <td>Cup</td>
+                        <td>NONE</td>
+                        <td>NOT YET</td>
+                        <td><span class="loss">NOT YET</span></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
 
 </div>
 
@@ -386,12 +548,12 @@ young footballers and unite supporters through the love of the game.
 
 <div class="card">
 <h3>Head Coach</h3>
-<p>_____________</p>
+<p>JINA LAKE NI NANI????</p>
 </div>
 
 <div class="card">
 <h3>Team Captain</h3>
-<p>Dancan Mugambi</p>
+<p>Duncan Mugambi</p>
 </div>
 
 <div class="card">
@@ -425,6 +587,7 @@ young footballers and unite supporters through the love of the game.
 
 </section>
 
+
 <!-- CONTACT -->
 
 <section id="contact">
@@ -437,7 +600,7 @@ young footballers and unite supporters through the love of the game.
 
 <p><strong>📞 Phone:</strong> +254 757941556</p>
 <p><strong>✉ Email:</strong> info@gachurufc.com</p>
-<p><strong>📍 Location:</strong> Gachuru, Kenya</p>
+<p><strong>📍 Location:</strong> Gachuru,Meru Kenya</p>
 
 <div class="socials">
 <a href="#">Facebook</a>
@@ -451,12 +614,41 @@ young footballers and unite supporters through the love of the game.
 
 </section>
 
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+<div class="container">
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+<p>
+Gachuru FC is a community football club committed to nurturing talent,
+promoting teamwork and competing with excellence. We aim to inspire
+young footballers and unite supporters through the love of the game.
+</p>
+</div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
 <footer>
 
 <h3>GACHURU FC</h3>
 <p>One Team • One Dream</p>
 <p>© 2026 Gachuru FC. All Rights Reserved.</p>
-
+<p>Our club is committed to developing local talent, promoting discipline, teamwork and sportsmanship through football.</p>
+<p> Designed and Maintained by WilyTech Hub.</p>
 </footer>
 
 </body>
